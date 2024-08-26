@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #19231F;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+textarea,
+input {
+  font-family: "Karla", sans-serif;
+  outline: none;
+  resize: none;
+}
