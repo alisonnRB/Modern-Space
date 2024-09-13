@@ -1,0 +1,14 @@
+.categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.categorie-title {
+    transform: rotate(-90deg);
+    font-size: clamp(0px, 1vw, 1.5rem);
+}
+
+.categorie-legend {
+    font-size: clamp(0px, 5vw, 2.5rem);
+}

@@ -11,9 +11,3 @@
 .explain {
     font-size: clamp(0px, .75vw, 1.15rem);
 }
-
-/* .about {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(150px, 1fr));
-    justify-items: start;
-} */
