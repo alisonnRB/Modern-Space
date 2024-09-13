@@ -7,9 +7,9 @@ import search from "@/assets/header/search.svg";
 
 export default function Header() {
     return (
-        <header className="flex justify-center items-center bg-transparent hover:bg-dark px-4">
+        <header className="flex fixed top-0 z-10 left-0 w-full justify-center items-center bg-transparent hover:bg-dark px-7 py-2">
 
-            <nav className="text-white w-full">
+            <nav className="text-white w-full flex gap-4">
 
                 <Link href={'/'} >
                     HOME
@@ -25,23 +25,26 @@ export default function Header() {
 
             </nav>
 
-            <nav className="flex">
+            <nav className="flex gap-4 items-center">
 
                 <Link href={"/"} >
                     <Image
                         src={search}
+                        className="w-[70%]"
                     />
                 </Link>
 
                 <Link href={"/"} >
                     <Image
                         src={profile}
+                        className="w-[70%]"
                     />
                 </Link>
 
                 <Link href={"/"} >
                     <Image
                         src={cart}
+                        className="w-[70%]"
                     />
                 </Link>
 
