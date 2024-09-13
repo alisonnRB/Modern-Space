@@ -1,0 +1,9 @@
+.header-guia {
+    font-size: clamp(0.6rem, 1vw, 1.5rem);
+}
+
+@media screen and (min-width: 2500px) {
+    header {
+        max-width: calc(100vw - 2005px);
+    }
+}
