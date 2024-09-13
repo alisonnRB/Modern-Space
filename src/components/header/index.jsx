@@ -7,7 +7,7 @@ import search from "@/assets/header/search.svg";
 
 export default function Header() {
     return (
-        <header className="flex fixed top-0 z-10 left-0 w-full justify-center items-center bg-transparent hover:bg-dark px-7 py-2">
+        <header className="flex fixed top-0 z-10 left-0 w-full justify-center items-center bg-transparent hover:bg-dark px-7 py-2 cursor-pointer">
 
             <nav className="text-white w-full flex gap-4">
 
