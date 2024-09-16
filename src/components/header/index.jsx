@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import profile from "@/assets/header/profile.svg";
 import cart from "@/assets/header/cart.svg";
-import search from "@/assets/header/search.svg";
+import Search from "./search";
 
 export default function Header() {
     return (
@@ -29,12 +29,7 @@ export default function Header() {
 
             <nav className="flex gap-3 items-center">
 
-                <Link href={"/"} >
-                    <Image
-                        src={search}
-                        className="w-[70%]"
-                    />
-                </Link>
+                <Search />
 
                 <Link href={"/"} >
                     <Image
