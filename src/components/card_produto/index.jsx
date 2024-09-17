@@ -13,11 +13,11 @@ export default function CardProduto({ item }) {
                     alt=""
                     objectFit="contain"
                     quality={100}
-                    className="absolute bottom-2"
+                    className="max-h-[98%]"
                 />
             </div>
 
-            <div className="flex flex-col gap-[1%]">
+            <div className="flex flex-col gap-[1%] h-[30%]">
                 <p className="product-name font-medium text-main">{item.nome}</p>
 
                 <span className="flex gap-[5%]">
@@ -26,7 +26,7 @@ export default function CardProduto({ item }) {
                 </span>
 
                 <Link href="">
-                    <button className="w-full border-solid border-dark border-[1px] inter py-[3%] px-[1%] product-name text-nowrap">
+                    <button className="min-w-full border-solid border-dark border-[1px] inter py-[3%] px-[2%] product-name text-nowrap">
                         ADICIONAR AO CARRINHO
                     </button>
                 </Link>

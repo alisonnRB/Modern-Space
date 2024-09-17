@@ -3,20 +3,13 @@
 }
 
 .motion {
-    height: 60%;
+    height: 80%;
+    min-height: 80%;
+    max-height: 80%;
+    background: rgb(223, 222, 217);
+    background: linear-gradient(360deg, rgba(203, 202, 197, 1) 65%, rgba(223, 222, 217, 1) 65%);
 }
 
 .container-card {
-    min-height: clamp(0px, 40vh, 500px);
-    scale: 1.5;
-}
-
-@media screen and (orientation: portrait) {
-    .motion {
-        height: 50%;
-    }
-
-    .container-card {
-        min-height: clamp(0px, 10vh, 300px);
-    }
+    min-height: 100%;
 }

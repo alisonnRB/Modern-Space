@@ -17,10 +17,10 @@ export default function Popular() {
 
     return (
 
-        <section className="mt-[15%] mb-[15%]">
-            <h1 className="popular-title font-medium flex justify-center mb-[20%]">POPULARES</h1>
+        <section className="mt-[15%] mb-[15%] flex flex-col items-center">
+            <h1 className="popular-title font-medium flex justify-center mb-[5%]">POPULARES</h1>
 
-            <span className="container-products px-[7%]">
+            <span className="container-products px-[7%] w-[90%] gap-x-[10%] gap-y-[8%]">
 
                 {popularProducts()}
 
