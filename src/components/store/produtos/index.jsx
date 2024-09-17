@@ -3,7 +3,7 @@ import './index.css';
 import CardProduto from '@/components/card_produto';
 import produtos from '@/script/produtos.js';
 
-export default function Menu({ food }) {
+export default function Menu({ slug }) {
 
     const Produtos = () => {
         const list = []
@@ -18,8 +18,8 @@ export default function Menu({ food }) {
     };
 
     return (
-        <section className="w-full flex justify-center py-[10%]">
-            <main className="w-[80%] menuGrid gap-x-[14.5%] gap-y-[30%] pb-[30%]">
+        <section className="w-full flex justify-center pb-[10%] bg-bg">
+            <main className="menuGrid px-[7%] w-[90%] gap-x-[10%] gap-y-[8%]">
                 {Produtos()}
             </main>
         </section >

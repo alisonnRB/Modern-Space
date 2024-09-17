@@ -1,6 +1,8 @@
 import Image from "next/image";
 import HomeCapa from '../../../assets/store/capa.png';
 
+import "./index.css"
+
 export default function Capa() {
     return (
         <section className="flex flex-col justify-center items-center relative ">

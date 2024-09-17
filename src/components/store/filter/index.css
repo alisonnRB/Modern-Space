@@ -1,0 +1,9 @@
+.title-store {
+    font-size: clamp(0px, 1.5vw, 2.5rem);
+}
+
+.option {
+    font-size: clamp(0px, 1vw, 1.5rem);
+    font-weight: bold;
+    cursor: pointer;
+}

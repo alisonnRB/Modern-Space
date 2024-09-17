@@ -3,16 +3,20 @@
 import Image from "next/image";
 import search from "@/assets/header/search.svg";
 import { useState } from "react";
+import { useSearchParams } from 'next/navigation';
 import { useRouter } from "next/navigation";
 
 export default function Search() {
     const [open, setOpen] = useState(false);
     const [searchValue, setSearchValue] = useState("");
     const router = useRouter();
+    const searchParams = useSearchParams();
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        router.push(`/store/produtos?search=${searchValue}`);
+        const type = searchParams.get('type') ? searchParams.get('type') : "all";
+        router.push(`/store/produtos?Search=${searchValue}&type=${type}`);
     };
 
     return (
