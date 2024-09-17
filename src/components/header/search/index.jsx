@@ -1,5 +1,7 @@
 "use client";
 
+import "./index.css";
+
 import Image from "next/image";
 import search from "@/assets/header/search.svg";
 import { useState } from "react";
@@ -21,31 +23,26 @@ export default function Search() {
 
     return (
         <>
-            {!open ? (
-                <span onClick={() => setOpen(true)}>
-                    <Image
-                        src={search}
-                        className="w-[70%]"
-                        alt="Search icon"
-                    />
-                </span>
-            ) : (
-                <form className="absolute right-[7.5%] flex gap-[3%]" onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        className="pl-[1em]"
-                        value={searchValue}
-                        onChange={(e) => setSearchValue(e.target.value)}
-                    />
-                    <button type="submit">
-                        <Image
-                            src={search}
-                            className="w-[70%]"
-                            alt="Submit search"
+            <span onClick={() => setOpen(true)}>
+                <Image
+                    src={search}
+                    className="min-w-[70%] w-[70%]"
+                    alt="Search icon"
+                />
+            </span>
+
+            {!open ? null
+
+                : (
+                    <form className="fixed w-[100%] box flex justify-center pl-[10%]" onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            className="pl-[1em] margin-auto rounded-sm"
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
                         />
-                    </button>
-                </form>
-            )}
+                    </form>
+                )}
         </>
     );
 }

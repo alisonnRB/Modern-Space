@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 
 export default function Menu({ params }) {
     const slug = params.slug;
-    const validSlugs = ["produtos", "search"]
+    const validSlugs = ["produtos"]
 
     if (!validSlugs.includes(slug)) {
         notFound();

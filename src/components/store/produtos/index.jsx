@@ -1,17 +1,38 @@
+'use client';
+
 import './index.css';
 
 import CardProduto from '@/components/card_produto';
 import produtos from '@/script/produtos.js';
 
-export default function Menu({ slug }) {
+import { useSearchParams } from 'next/navigation';
+
+export default function Menu() {
+    const searchParams = useSearchParams();
+
+    const search = searchParams.get('Search') ? searchParams.get('Search') : "";
+    const type = searchParams.get('type') ? searchParams.get('type') : "all";
 
     const Produtos = () => {
         const list = []
 
         for (let i = 0; i < produtos.produtos.length; i++) {
             let item = produtos.produtos[i]
-            let card = <CardProduto item={item} key={i} />
-            list.push(card);
+            if (((item.nome).toLowerCase()).includes((search).toLowerCase())) {
+                if (type == "all") {
+                    let card = <CardProduto item={item} key={i} />
+                    list.push(card);
+                } else {
+                    if (item.categoria == type) {
+                        let card = <CardProduto item={item} key={i} />
+                        list.push(card);
+                    }
+                }
+            }
+        }
+
+        if (list.length === 0) {
+            return <h1>DON'T HAVE MORE</h1>
         }
 
         return list

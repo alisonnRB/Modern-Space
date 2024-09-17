@@ -1,0 +1,10 @@
+.box {
+    left: 50%;
+    transform: translate(calc(-50% - 1em), 0);
+}
+
+@media screen and (max-width: 560px) {
+    .box {
+        top: 5vh;
+    }
+}

@@ -34,14 +34,14 @@ export default function Header() {
                 <Link href={"/"} >
                     <Image
                         src={profile}
-                        className="w-[70%]"
+                        className="min-w-[70%] w-[70%]"
                     />
                 </Link>
 
                 <Link href={"/"} >
                     <Image
                         src={cart}
-                        className="w-[70%]"
+                        className="min-w-[70%] w-[70%]"
                     />
                 </Link>
 
