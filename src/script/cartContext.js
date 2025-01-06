@@ -25,7 +25,7 @@ export const CartProvider = ({ children }) => {
     }, [cart, isClient]);
 
     const updateTotal = () => {
-        const newTotal = cart.reduce((acc, cartItem) => acc + ((parseFloat(cartItem.price) * cartItem.desconto) * cartItem.quantity), 0);
+        const newTotal = cart.reduce((acc, cartItem) => acc + ((parseFloat(cartItem.price) - (parseFloat(cartItem.price) * cartItem.desconto)) * cartItem.quantity), 0);
         setTotal(newTotal);
     };
 
