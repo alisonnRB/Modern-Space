@@ -18,7 +18,7 @@ export default function Footer() {
 
                 <nav className="flex gap-[5%]">
 
-                    <Link href="">
+                    <Link href="https://www.facebook.com" target="blank" passHref>
                         <Image
                             src={Facebook}
                             alt=""
@@ -28,7 +28,7 @@ export default function Footer() {
                         />
                     </Link>
 
-                    <Link href="">
+                    <Link href="https://www.instagram.com/" target="blank" passHref>
                         <Image
                             src={Instagram}
                             alt=""
@@ -38,7 +38,7 @@ export default function Footer() {
                         />
                     </Link>
 
-                    <Link href="">
+                    <Link href="https://www.linkedin.com/" target="blank" passHref>
                         <Image
                             src={Linkedin}
                             alt=""
@@ -57,11 +57,11 @@ export default function Footer() {
 
                     <nav className="flex flex-col gap-[.45rem]">
 
-                        <Link href="" className="text-bg foot-link">
+                        <Link href="/" className="text-bg foot-link">
                             Home
                         </Link>
 
-                        <Link href="" className="text-bg foot-link">
+                        <Link href="/store/produtos" className="text-bg foot-link">
                             Loja
                         </Link>
 
@@ -101,19 +101,19 @@ export default function Footer() {
 
                     <nav className="flex flex-col gap-[.45rem]">
 
-                        <Link href="" className="text-bg foot-link">
+                        <Link href="/store/produtos?type=quarto" className="text-bg foot-link">
                             Quarto
                         </Link>
 
-                        <Link href="" className="text-bg foot-link">
+                        <Link href="/store/produtos?type=cozinha" className="text-bg foot-link">
                             Cozinha
                         </Link>
 
-                        <Link href="" className="text-bg foot-link">
+                        <Link href="/store/produtos?type=escritorio" className="text-bg foot-link">
                             Escritório
                         </Link>
 
-                        <Link href="" className="text-bg foot-link">
+                        <Link href="/store/produtos?type=sala" className="text-bg foot-link">
                             Sala de estar
                         </Link>
 

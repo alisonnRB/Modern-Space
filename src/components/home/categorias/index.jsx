@@ -20,7 +20,7 @@ export default function Categorias() {
 
                 <nav className="categorias text-white">
 
-                    <Link href="">
+                    <Link href="/store/produtos?type=quarto">
                         <Image
                             src={Quarto}
                             objectFit="contain"
@@ -30,7 +30,7 @@ export default function Categorias() {
                         <h2 className="categorie-title relative bottom-[25%] left-[-38%] font-bold">QUARTO</h2>
                     </Link>
 
-                    <Link href="">
+                    <Link href="/store/produtos?type=cozinha">
                         <Image
                             src={Cozinha}
                             objectFit="contain"
@@ -40,7 +40,7 @@ export default function Categorias() {
                         <h2 className="categorie-title relative bottom-[25%] left-[-38%] font-bold">COZINHA</h2>
                     </Link>
 
-                    <Link href="">
+                    <Link href="/store/produtos?type=escritorip">
                         <Image
                             src={Escritorio}
                             objectFit="contain"
@@ -50,7 +50,7 @@ export default function Categorias() {
                         <h2 className="categorie-title relative bottom-[25%] left-[-38%] font-bold">ESCRITÓRIO</h2>
                     </Link>
 
-                    <Link href="">
+                    <Link href="/store/produtos?type=sala">
                         <Image
                             src={Sala}
                             objectFit="contain"

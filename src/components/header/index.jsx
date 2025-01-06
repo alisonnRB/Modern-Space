@@ -17,7 +17,7 @@ export default function Header() {
                     HOME
                 </Link>
 
-                <Link href={'/'} className="header-guia">
+                <Link href={'/store/produtos'} className="header-guia">
                     LOJA
                 </Link>
 
