@@ -1,3 +1,5 @@
+"use client";
+
 import "./index.css";
 
 import Link from "next/link";
@@ -6,8 +8,12 @@ import Image from "next/image";
 import profile from "@/assets/header/profile.svg";
 import cart from "@/assets/header/cart.svg";
 import Search from "./search";
+import { useCart } from "@/script/cartContext";
 
 export default function Header() {
+
+    const { getTotalItemsCount } = useCart();
+
     return (
         <header className="flex fixed top-0 z-10 w-full justify-center items-center bg-transparent hover:bg-dark px-7 py-2 cursor-pointer">
 
@@ -39,6 +45,7 @@ export default function Header() {
                 </Link>
 
                 <Link href={"/"} >
+                    {getTotalItemsCount() > 0 ? <div className={`w-4 h-4 text-[.8em] left-6 bottom-1 rounded-full relative bg-bg text-balck flex justify-center items-center mb-[-1em]`}>{getTotalItemsCount()}</div> : null}
                     <Image
                         src={cart}
                         className="min-w-[70%] w-[70%]"

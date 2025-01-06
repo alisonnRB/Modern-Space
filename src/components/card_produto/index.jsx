@@ -25,7 +25,7 @@ export default function CardProduto({ item }) {
                     {item.desconto != 0 ? <p className="product-name font-medium text-main line-through ">R$ {" " + ((item.price).toFixed(2)).replace('.', ',')}</p> : null}
                 </span>
 
-                <Link href="">
+                <Link href={`/produto/${encodeURIComponent(item.nome)}`}>
                     <button className="min-w-full border-solid border-dark border-[1px] inter py-[3%] px-[2%] product-name text-nowrap">
                         ADICIONAR AO CARRINHO
                     </button>
