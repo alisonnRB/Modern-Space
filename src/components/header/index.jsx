@@ -4,14 +4,16 @@ import "./index.css";
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 import profile from "@/assets/header/profile.svg";
 import cart from "@/assets/header/cart.svg";
 import Search from "./search";
 import { useCart } from "@/script/cartContext";
+import Cart from "@/components/cart";
 
 export default function Header() {
-
+    const [onCart, setOnCart] = useState(false);
     const { getTotalItemsCount } = useCart();
 
     return (
@@ -44,15 +46,17 @@ export default function Header() {
                     />
                 </Link>
 
-                <Link href={"/"} >
+                <span onClick={() => { setOnCart(true) }}>
                     {getTotalItemsCount() > 0 ? <div className={`w-4 h-4 text-[.8em] left-6 bottom-1 rounded-full relative bg-bg text-balck flex justify-center items-center mb-[-1em]`}>{getTotalItemsCount()}</div> : null}
                     <Image
                         src={cart}
                         className="min-w-[70%] w-[70%]"
                     />
-                </Link>
+                </span>
 
             </nav>
+
+            {onCart ? <Cart setOnCart={setOnCart} /> : null}
         </header>
     );
 }

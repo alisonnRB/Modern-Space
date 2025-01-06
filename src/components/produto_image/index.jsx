@@ -8,7 +8,7 @@ export default function Pimage({ product }) {
     const [imagens, setImagens] = useState(1);
 
     return (
-        <span className="h-full w-[40%] relative z-20 ml-10 flex flex-row ">
+        <span className="h-full w-[40%] relative ml-10 flex flex-row ">
 
             <div className="w-40 h-full flex flex-col justify-center items-center gap-8">
                 <div className={`w-[40%] cursor-pointer ${imagens == 1 ? "opacity-100" : "opacity-30"}`} onClick={() => { setImagens(1) }}>

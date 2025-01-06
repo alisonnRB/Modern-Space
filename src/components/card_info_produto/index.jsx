@@ -48,7 +48,7 @@ export default function info_product({ product }) {
 
 
     return (
-        <span className="h-full w-[40%] relative z-20 mr-10 flex flex-row justify-center items-center">
+        <span className="h-full w-[40%] relative  mr-10 flex flex-row justify-center items-center">
 
             <div className="bg-white p-10 w-[60%] h-[60%] flex flex-col">
                 <h1 className="text-main font-bold">{product.nome}</h1>
