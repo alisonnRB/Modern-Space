@@ -1,9 +1,35 @@
 'use client';
 
 import { useState } from "react";
+import { useCart } from "@/script/cartContext";
 
 export default function info_product({ product }) {
     const [qtd, setQtd] = useState(1);
+    const { addItemToCart } = useCart();
+
+    const [inAnimation, setAnimation] = useState(false);
+
+    const animationCardForAddItem = async (item) => {
+        if (inAnimation) {
+            return;
+        }
+
+        setAnimation(true);
+        for (let i = 0; i < qtd; i++) {
+            addItemToCart(item);
+        }
+
+
+        await delay(1000);
+
+        setAnimation(false);
+
+    }
+
+    function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
 
     const cor = () => {
         const list = [];
@@ -58,7 +84,9 @@ export default function info_product({ product }) {
 
                     </span>
 
-                    <button className="h-full px-2 bg-black text-white font-semibold text-[.8em]">ADICIONAR AO CARRINHO</button>
+                    <button className="h-full px-2 bg-black text-white font-semibold text-[.8em]" onClick={() => { animationCardForAddItem(product) }}>
+                        ADICIONAR AO CARRINHO
+                    </button>
 
                 </span>
 
