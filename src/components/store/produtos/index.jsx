@@ -32,7 +32,7 @@ export default function Menu() {
         }
 
         if (list.length === 0) {
-            return <h1>DON'T HAVE MORE</h1>
+            return <h1>DON&apos;T HAVE MORE</h1>
         }
 
         return list

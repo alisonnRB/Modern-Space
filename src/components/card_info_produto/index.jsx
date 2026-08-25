@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useCart } from "@/script/cartContext";
 
-export default function info_product({ product }) {
+export default function Info_product({ product }) {
     const [qtd, setQtd] = useState(1);
     const { addItemToCart } = useCart();
 
