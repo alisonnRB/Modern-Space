@@ -5,6 +5,7 @@ import "./index.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import SearchParamsWrapper from '@/app/SearchParamsWrapper';
 
 import profile from "@/assets/header/profile.svg";
 import cart from "@/assets/header/cart.svg";
@@ -36,8 +37,7 @@ export default function Header() {
             </nav>
 
             <nav className="flex gap-3 items-center">
-
-                <Search />
+                <SearchParamsWrapper><Search /></SearchParamsWrapper>
 
                 <Link href={"/"} >
                     <Image
